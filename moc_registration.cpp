@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'registration.h'
 **
-** Created by: The Qt Meta Object Compiler version 68 (Qt 6.1.3)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.15.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -12,8 +12,8 @@
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'registration.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 68
-#error "This file was generated using the moc from 6.1.3. It"
+#elif Q_MOC_OUTPUT_REVISION != 67
+#error "This file was generated using the moc from 5.15.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -22,17 +22,20 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Registration_t {
-    const uint offsetsAndSize[8];
+    QByteArrayData data[4];
     char stringdata0[60];
 };
-#define QT_MOC_LITERAL(ofs, len) \
-    uint(offsetof(qt_meta_stringdata_Registration_t, stringdata0) + ofs), len 
+#define QT_MOC_LITERAL(idx, ofs, len) \
+    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
+    qptrdiff(offsetof(qt_meta_stringdata_Registration_t, stringdata0) + ofs \
+        - idx * sizeof(QByteArrayData)) \
+    )
 static const qt_meta_stringdata_Registration_t qt_meta_stringdata_Registration = {
     {
-QT_MOC_LITERAL(0, 12), // "Registration"
-QT_MOC_LITERAL(13, 23), // "on_pushButton_2_clicked"
-QT_MOC_LITERAL(37, 0), // ""
-QT_MOC_LITERAL(38, 21) // "on_pushButton_clicked"
+QT_MOC_LITERAL(0, 0, 12), // "Registration"
+QT_MOC_LITERAL(1, 13, 23), // "on_pushButton_2_clicked"
+QT_MOC_LITERAL(2, 37, 0), // ""
+QT_MOC_LITERAL(3, 38, 21) // "on_pushButton_clicked"
 
     },
     "Registration\0on_pushButton_2_clicked\0"
@@ -43,7 +46,7 @@ QT_MOC_LITERAL(38, 21) // "on_pushButton_clicked"
 static const uint qt_meta_data_Registration[] = {
 
  // content:
-       9,       // revision
+       8,       // revision
        0,       // classname
        0,    0, // classinfo
        2,   14, // methods
@@ -53,9 +56,9 @@ static const uint qt_meta_data_Registration[] = {
        0,       // flags
        0,       // signalCount
 
- // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   26,    2, 0x08,    0 /* Private */,
-       3,    0,   27,    2, 0x08,    1 /* Private */,
+ // slots: name, argc, parameters, tag, flags
+       1,    0,   24,    2, 0x08 /* Private */,
+       3,    0,   25,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -68,28 +71,22 @@ void Registration::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<Registration *>(_o);
-        (void)_t;
+        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->on_pushButton_2_clicked(); break;
         case 1: _t->on_pushButton_clicked(); break;
         default: ;
         }
     }
-    (void)_a;
+    Q_UNUSED(_a);
 }
 
-const QMetaObject Registration::staticMetaObject = { {
+QT_INIT_METAOBJECT const QMetaObject Registration::staticMetaObject = { {
     QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
-    qt_meta_stringdata_Registration.offsetsAndSize,
+    qt_meta_stringdata_Registration.data,
     qt_meta_data_Registration,
     qt_static_metacall,
     nullptr,
-qt_incomplete_metaTypeArray<qt_meta_stringdata_Registration_t
-
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
-
-
->,
     nullptr
 } };
 
@@ -118,7 +115,7 @@ int Registration::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 2;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 2)
-            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
+            *reinterpret_cast<int*>(_a[0]) = -1;
         _id -= 2;
     }
     return _id;

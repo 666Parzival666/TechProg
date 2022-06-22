@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'tasks.h'
 **
-** Created by: The Qt Meta Object Compiler version 68 (Qt 6.1.3)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.15.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -12,8 +12,8 @@
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'tasks.h' doesn't include <QObject>."
-#elif Q_MOC_OUTPUT_REVISION != 68
-#error "This file was generated using the moc from 6.1.3. It"
+#elif Q_MOC_OUTPUT_REVISION != 67
+#error "This file was generated using the moc from 5.15.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -22,19 +22,22 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Tasks_t {
-    const uint offsetsAndSize[12];
+    QByteArrayData data[6];
     char stringdata0[75];
 };
-#define QT_MOC_LITERAL(ofs, len) \
-    uint(offsetof(qt_meta_stringdata_Tasks_t, stringdata0) + ofs), len 
+#define QT_MOC_LITERAL(idx, ofs, len) \
+    Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
+    qptrdiff(offsetof(qt_meta_stringdata_Tasks_t, stringdata0) + ofs \
+        - idx * sizeof(QByteArrayData)) \
+    )
 static const qt_meta_stringdata_Tasks_t qt_meta_stringdata_Tasks = {
     {
-QT_MOC_LITERAL(0, 5), // "Tasks"
-QT_MOC_LITERAL(6, 16), // "on_task1_clicked"
-QT_MOC_LITERAL(23, 0), // ""
-QT_MOC_LITERAL(24, 16), // "on_task2_clicked"
-QT_MOC_LITERAL(41, 16), // "on_task3_clicked"
-QT_MOC_LITERAL(58, 16) // "on_task4_clicked"
+QT_MOC_LITERAL(0, 0, 5), // "Tasks"
+QT_MOC_LITERAL(1, 6, 16), // "on_task1_clicked"
+QT_MOC_LITERAL(2, 23, 0), // ""
+QT_MOC_LITERAL(3, 24, 16), // "on_task2_clicked"
+QT_MOC_LITERAL(4, 41, 16), // "on_task3_clicked"
+QT_MOC_LITERAL(5, 58, 16) // "on_task4_clicked"
 
     },
     "Tasks\0on_task1_clicked\0\0on_task2_clicked\0"
@@ -45,7 +48,7 @@ QT_MOC_LITERAL(58, 16) // "on_task4_clicked"
 static const uint qt_meta_data_Tasks[] = {
 
  // content:
-       9,       // revision
+       8,       // revision
        0,       // classname
        0,    0, // classinfo
        4,   14, // methods
@@ -55,11 +58,11 @@ static const uint qt_meta_data_Tasks[] = {
        0,       // flags
        0,       // signalCount
 
- // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   38,    2, 0x08,    0 /* Private */,
-       3,    0,   39,    2, 0x08,    1 /* Private */,
-       4,    0,   40,    2, 0x08,    2 /* Private */,
-       5,    0,   41,    2, 0x08,    3 /* Private */,
+ // slots: name, argc, parameters, tag, flags
+       1,    0,   34,    2, 0x08 /* Private */,
+       3,    0,   35,    2, 0x08 /* Private */,
+       4,    0,   36,    2, 0x08 /* Private */,
+       5,    0,   37,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -74,7 +77,7 @@ void Tasks::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         auto *_t = static_cast<Tasks *>(_o);
-        (void)_t;
+        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->on_task1_clicked(); break;
         case 1: _t->on_task2_clicked(); break;
@@ -83,21 +86,15 @@ void Tasks::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void 
         default: ;
         }
     }
-    (void)_a;
+    Q_UNUSED(_a);
 }
 
-const QMetaObject Tasks::staticMetaObject = { {
+QT_INIT_METAOBJECT const QMetaObject Tasks::staticMetaObject = { {
     QMetaObject::SuperData::link<QWidget::staticMetaObject>(),
-    qt_meta_stringdata_Tasks.offsetsAndSize,
+    qt_meta_stringdata_Tasks.data,
     qt_meta_data_Tasks,
     qt_static_metacall,
     nullptr,
-qt_incomplete_metaTypeArray<qt_meta_stringdata_Tasks_t
-
-, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>, QtPrivate::TypeAndForceComplete<void, std::false_type>
-
-
->,
     nullptr
 } };
 
@@ -126,7 +123,7 @@ int Tasks::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 4;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         if (_id < 4)
-            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
+            *reinterpret_cast<int*>(_a[0]) = -1;
         _id -= 4;
     }
     return _id;
