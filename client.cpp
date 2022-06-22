@@ -1,30 +1,8 @@
 #include "client.h"
 
-Client::Client(QTcpSocket *socket)
+Client::Client()
 {
-    this->socket = socket;
-    isAuth = false;
-}
-
-void Client::sendMessage(QString msg)
-{
-    QByteArray array = msg.toLocal8Bit();
-    char* buffer = array.data();
-
-    socket->write(buffer);
-}
-
-bool Client::checkAuth()
-{
-    return isAuth;
-}
-
-QTcpSocket* Client::getSocket()
-{
-    return this->socket;
-}
-
-void Client::setAuth()
-{
-    this->isAuth = true;
+    this->socket = new QTcpSocket();
+    socket->connectToHost("localhost", 33337);
+    QAbstractSocket::connect(socket, SIGNAL(readyRead()), SLOT(readyRead()));
 }

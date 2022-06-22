@@ -1,22 +1,23 @@
 #ifndef CLIENT_H
 #define CLIENT_H
 
+#include <QString>
 #include <QTcpSocket>
-
-
+#include <QAbstractSocket>
 
 class Client
 {
 public:
-    Client(QTcpSocket *socket);
-    void sendMessage(QString msg);
-    bool checkAuth();
-    void setAuth();
-    QTcpSocket* getSocket();
-private:
-    QTcpSocket* socket;
-    bool isAuth;
+    Client();
+    QString registration(QString username, QString password);
+    QString auth(QString username, QString password);
+    void sendMessage(QString message);
 
+public slots:
+    void onReadyRead();
+
+private:
+    QTcpSocket *socket;
 };
 
 #endif // CLIENT_H
