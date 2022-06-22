@@ -1,0 +1,9 @@
+version: '3.6'
+services:
+  server:
+    build:
+      context: .
+    container_name: server
+    restart: always
+    ports:
+      - "33337:33337"
