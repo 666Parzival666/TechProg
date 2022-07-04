@@ -20,6 +20,19 @@ QByteArray task_2(QString num)
     int temp, minindex, min;
     int begin_index = 0;
     int N = num.toInt();
+    
+    /*system("chcp 1251");
+    system("cls");
+    for (int i = 0; i<SIZE; i++)
+    {
+    a[i][i] = 0;
+    for (int j = i + 1; j<SIZE; j++) {
+      printf("Введите расстояние %d - %d: ", i + 1, j + 1);
+      scanf("%d", &temp);
+      a[i][j] = temp;
+      a[j][i] = temp;
+    }
+    }*/
 
     for (int i = 0; i<SIZE; i++)
     {
@@ -32,6 +45,19 @@ QByteArray task_2(QString num)
             }
         }
     }
+    /*for (int i = 0; i<SIZE; i++)
+    {
+    for (int j = 0; j<SIZE; j++)
+      printf("%5d ", a[i][j]);
+    printf("\n");
+    }
+
+    for (int i = 0; i<SIZE; i++)
+        {
+        for (int j = 0; j<SIZE; j++)
+            qDebug() << a[i][j];
+        qDebug() << endl;
+        }*/
     for (int i = 0; i<SIZE; i++)
     {
         d[i] = 10000;
@@ -66,6 +92,9 @@ QByteArray task_2(QString num)
           v[minindex] = 0;
         }
     } while (minindex < 10000);
+    /*printf("\nКратчайшие расстояния до вершин: \n");
+    for (int i = 0; i<SIZE; i++)
+    printf("%5d ", d[i]);*/
 
     int ver[SIZE];
     int end = 4;
@@ -96,4 +125,10 @@ QByteArray task_2(QString num)
     qDebug() << answer_to_string;
 
     return answer_to_string.toUtf8();
+    /*if (answer_to_string == answer) {
+        //upd_statistics(1, 1);
+        return "+";
+    }
+    //upd_statistics(1, -1);
+    return "-";*/
 }
